@@ -6,7 +6,10 @@
 # etc
 #
 
-OPTIM=fast
+CC=gcc-5
+CXX=g++-5
+
+OPTIM=fast_debug
 ODE = 0
 PHYSX = 0
 G4 = 0
