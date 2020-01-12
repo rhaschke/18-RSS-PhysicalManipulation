@@ -31,7 +31,6 @@ void solve(uint i){
   initFolStateFromKin(L, K);
 
   OptLGP lgp(K, L);
-//  lgp.buildTree(2);  mlr::wait();
   lgp.run();
 }
 
@@ -150,16 +149,13 @@ int main(int argc,char **argv){
 
   //solve a problem
   if(mlr::checkParameter<uint>("problem")){
-    //    buildTree(mlr::getParameter<uint>("problem"));
     solve(mlr::getParameter<uint>("problem"));
     return 0;
   }
 
   //compute some specific solutions
-  solveFixed(1);
+  solveFixed(1); return 0;
 
   //low-level example of using the LGP class
-  //example();
-
-  return 0;
+  //example(); return 0;
 }
